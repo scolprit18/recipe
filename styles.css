@@ -1,0 +1,722 @@
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Montserrat:wght@400;700&display=swap');
+
+/*Start css reset*/
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+body {
+	line-height: 1;
+}
+ol, ul {
+	list-style: none;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+/*End css reset*/
+
+
+
+html {
+    background-color: rgba(122, 191, 191, .5);
+    font-family: "Bebas Neue", sans-serif;
+}
+
+body {
+    margin: 0 auto;
+    text-align: center;
+    background-color: #F2F2F2;
+    color: #0D0D0D;
+    width: 85%;
+    max-width: 1280px;
+    display: grid;
+        grid-template-areas:
+        "menu"
+        "search"
+        "header"
+        "recipe"
+        "aside"
+        "footer";
+}
+
+h1 {
+    font-size: 40px;
+}
+
+h2 {
+    font-size: 30px;
+}
+
+h3 {
+    font-size: 25px;
+}
+
+ul {
+    list-style: none;
+}
+
+nav a {
+    text-decoration: none;
+    color: #EB5428;
+    font-size: 20px;
+}
+#menu {
+    grid-area: menu;
+    display: block;
+    background-color: #ffffff;
+    box-shadow: 0 2px 4px rgba(0,0,0,.2);
+    position: relative;
+}
+#menu ul {
+    display: inline;
+}
+#menu a {
+    display: inline-block;
+    width: 8%;
+    height: auto;
+    transition: background-color 1s;
+}
+#home {
+    background-color: #EB5428;
+    padding-top: 20px;
+    padding-bottom: 10px;
+    position: absolute;
+    left: 0;
+}
+
+#menu img {
+    width: 50%;
+    padding-top: 10px;
+}
+#menu span {
+    padding-bottom: 10px;
+}
+#sign-in {
+    position: absolute;
+    top: 0;
+    right: 0;
+    padding-top: 10px;
+    padding-bottom: 10px;
+}
+#sign-in span {
+    color: #0D0D0D;
+}
+#menu li {
+    display: inline;
+}
+#menu a:hover {
+    background-color: #EB5428;
+    color: #ffffff;
+}
+#sign-in span:hover {
+    color: #ffffff;
+}
+#sign-in svg:hover {
+    stroke: #ffffff;
+}
+#share-nav span {
+    transition: background-color 1s;
+}
+#share-nav span:hover {
+    background-color: #EB5428;
+    color: #ffffff;
+}
+#social span {
+    transition: background-color 1s;
+}
+#social span:hover {
+    background-color: #EB5428;
+    color: #ffffff;
+}
+aside section:hover {
+    background-color: #D4B20B;
+}
+p, dd, dt, #ingredients li, #directions li {
+    font-family: Montserrat;
+    font-size: 16px;
+}
+#p1, #p2 {
+    text-align: left;
+    padding: 10px;
+    line-height: 2em;
+}
+span {
+    display: block;
+}
+
+dt {
+    font-weight: 700;
+}
+main {
+    display: grid;
+    grid-template-areas: 
+    "details details details details"
+    "ingredients directions directions directions";
+} 
+#ingredients {
+    grid-area: ingredients;
+    padding-top: 20px;
+    padding-left: 10px;
+    padding-right: 50px;
+    padding-bottom: 0;
+    width: 110%;
+
+}
+#ingredients ul {
+    list-style-position: inside;
+    list-style-type:disc;
+}
+#ingredients li {
+    text-align: left;
+    padding: 10px;
+}
+#directions {
+    grid-area: directions;
+    padding: 20px;
+}
+#directions ol {
+    list-style-type: decimal;
+}
+#directions li {
+    text-align: left;
+    padding: 10px;
+    line-height: 2em;
+}
+
+aside {
+    background-color: #7ABFBF;
+}
+aside a {
+    text-decoration: none;
+    color: #0D0D0D;
+}
+aside svg {
+    width: 12px;
+    height: 12px;
+}
+
+section p:nth-child(even) {
+    font-weight: 700;
+}
+
+#search {
+    background-color:#EB5428;
+    width: fit-content;
+    height: 40px;
+    padding: 5px;
+    margin: 0 auto;
+    position: relative;
+}
+
+#search input {
+    font-size: 16px;
+    font-family: Montserrat, sans-serif;
+    border-style:solid;
+    border-color: #EB5428;
+    height: 46px;
+    width: 300px; 
+    padding: 0 2px;
+    margin: 0;
+    position: absolute;
+    right: 50px;
+    top: 0;
+}
+
+#search input:focus {
+    outline: none;
+    border-color:#0D0D0D;
+}
+
+footer h2 {
+    visibility: hidden;
+}
+footer {
+    font-size: 20px;
+    grid-area: footer;
+    height:240px;
+    position: relative;
+}
+footer img {
+    width: 15%;
+    position: absolute;
+    left: 10px;
+    top: 30px;
+}
+#footer-text {
+    position: absolute;
+    left: 200px;
+    top: 50px;
+    font-family: "bebas neue";
+    font-size: 20px;
+    text-transform: uppercase;
+}
+#social {
+    display: block;
+    position: absolute;
+    right: 20px;
+    top: 10px;
+}
+#social ul {
+    display: inline;
+}
+#social li {
+    display: inline;
+}
+#social a {
+    display: inline-block;
+    padding: 30px;
+}
+
+@media (min-width: 768px) {
+    body {
+        max-width: 1280px;
+    }
+    #burger {
+        visibility: hidden;
+        position: absolute;
+        left: 10px;
+    }
+    
+    #search {
+        grid-area: search;
+        margin: 50px 60%;
+    }
+    header {
+        grid-area: header;
+        display: grid;
+        grid-template-areas: 
+        "h1 h1 h1"
+        "nav img p1"
+        "nav img p2"
+        "nav img p2"
+        "nav img p2"
+        "nav img p2"
+        "nav img p2"
+        "nav img p2"
+        "nav img p2"
+        "nav img p2";
+    }
+    h1 {
+        grid-area: h1;
+        padding: 20px;
+    }
+    #share-nav {
+        grid-area: nav;
+        padding: 20px;
+        background-color: #ffffff;
+        border:#EB5428 solid;
+    }
+    #share-nav li {
+        padding: 20px;
+    }
+    header img {
+        grid-area: img;
+        width: 100%;
+        height: auto;
+    }
+    
+    #p1 {
+        grid-area: p1;
+        height: 20%;
+    }
+    #p2 {
+        grid-area: p2;
+    }
+    #recipe {
+        grid-area: recipe;
+        margin: 0 auto;
+    }
+    
+    
+    
+    aside {
+        grid-area: aside;
+        display: grid;
+        grid-template-areas: 
+        "h2 h2 h2 h2"
+        "mexican-rice salsa guacamole tortillas";
+        padding-top: 10px;
+        padding-bottom: 10px;
+    }
+    aside h2 {
+        grid-area: h2;
+        padding: 10px;
+    }
+    aside h3 {
+        text-align: left;
+        padding-left: 40px;
+        padding-bottom: 5px;
+        padding-top: 10px;
+    }
+    aside p {
+        text-align: left;
+        padding-left: 40px;
+        padding-bottom: 5px;
+        padding-top: 5px;
+        width: 65%;
+    }
+    aside section {
+        width: 234px;
+        margin: 10px;
+        transition: background-color 1s;
+    }
+    
+    #mexican-rice {
+        grid-area: mexican-rice;
+    }
+    #salsa {
+        grid-area: salsa;
+    }
+    #guacamole {
+        grid-area: guacamole;
+    }
+    #tortillas {
+        grid-area: tortillas;
+    }
+    
+    
+    #details {
+        grid-area: details;
+        background-color: #0D0D0D;
+        color: rgba(122, 191, 191, .5);
+        margin: 0 auto;
+        padding-top: 10px;
+        padding-bottom: 10px;
+        width: 100%;
+    }
+    dd {
+        text-align: center;
+    }
+    dl {
+        display: grid;
+        text-align: center;
+        grid-template-columns: repeat(5, 1fr);
+        grid-template-rows: repeat(2, 1fr);
+    }
+    dt.one {
+        grid-column: 1;
+        grid-row: 1;
+    }
+    dd.one {
+        grid-column: 1;
+        grid-row: 2;
+    }
+    dt.two {
+        grid-column: 2;
+        grid-row: 1;
+    }
+    dd.two {
+        grid-column: 2;
+        grid-row: 2;
+    }
+    dt.three {
+        grid-column: 3;
+        grid-row: 1;
+    }
+    dd.three {
+        grid-column: 3;
+        grid-row: 2;
+    }
+    dt.four {
+        grid-column: 4;
+        grid-row: 1;
+    }
+    dd.four {
+        grid-column: 4;
+        grid-row: 2;
+    }
+    dt.five {
+        grid-column: 5;
+        grid-row: 1;
+    }
+    dd.five {
+        grid-column: 5;
+        grid-row: 2;
+    }
+    footer {
+        grid-area: footer;
+        height:240px;
+        position: relative;
+    }
+    footer img {
+        width: 15%;
+        position: absolute;
+        left: 10px;
+        top: 30px;
+    }
+    #footer-text {
+        position: absolute;
+        left: 200px;
+        top: 50px;
+        font-family: "bebas neue";
+        font-size: 20px;
+        text-transform: uppercase;
+    }
+    #social {
+        display: block;
+        position: absolute;
+        right: 20px;
+        top: 10px;
+    }
+    #social ul {
+        display: inline;
+    }
+    #social li {
+        display: inline;
+    }
+    #social a {
+        display: inline-block;
+        padding: 30px;
+    }
+    
+
+   
+}
+
+@media (max-width: 768px) {
+    body {
+        max-width: 768px;
+    }
+    header {
+        display: grid;
+        grid-template-areas: 
+        "h1"
+        "share-nav"
+        "img"
+        "p1"
+        "p2";
+        position: relative;
+    }
+    h1 {
+        grid-area: h1;
+        padding: 10px;
+        text-align: left;
+    }
+    #share-nav {
+        grid-area: share-nav;
+        display: block;
+        background-color:rgba(255, 255, 255, .6);
+        position: absolute;
+        width: 100%;
+    }
+    #share-nav ul {
+        display: inline;
+    }  
+    #share-nav li {
+        display: inline;
+    } 
+    #share-nav a {
+        display: inline-block;
+        padding: 5px 30px 5px 30px;
+    }
+    header img {
+        grid-area: img;
+        width: 100%;
+    }
+    #p1 {
+        grid-area: p1;
+    }
+    #p2 {
+        grid-area: p2;
+    }
+    #search {
+        position: absolute;
+        top: 10px;
+        right: 130px;
+        width: fit-content;
+        height: 30px;
+    }
+    #search svg {
+        width: 50%;
+        padding-bottom: 10px;
+    }
+    #search input {
+        width: fit-content;
+        height: 36px;
+    }
+    #menu {
+        position: relative;
+        background-color: #ffffff;
+        height: 150px;
+    }
+    #burger {
+        visibility: hidden;
+        position: absolute;
+        left: 10px;
+    }
+    #home svg {
+        width: 70%;
+        height: 70%;
+    }
+    #home {
+        position: absolute;
+        width: fit-content;
+    }
+    #sign-in svg {
+        width: 50%;
+        height: 50%;
+    }
+    #sign-in {
+        position: absolute;
+        padding-right: 10px;
+        top: 0;
+    }
+    #sign-in span {
+        font-size: .8em;
+    }
+    #food-menu{
+        position: relative;
+        top: 60px;
+    }
+    #food-menu a {
+        width: 10%;
+        padding: 10px;
+    }  
+    #recipe {
+        display: grid;
+        grid-template-areas: 
+        "details details details"
+        "ingredients directions directions";
+    }
+    #details {
+        grid-area: details;
+        padding: 5px;
+    }
+    #ingredients {
+        grid-area: ingredients;
+        line-height: 1em;
+    }   
+    #directions {
+        grid-area: directions;
+        line-height: .8em;
+    }
+    #directions li {
+        padding: 2px;
+    }
+    aside {
+        display: grid;
+        grid-template-areas: 
+        "h2 h2"
+        "mexican-rice salsa"
+        "guacamole tortillas";
+        padding: 5px;
+    }
+    aside h2 {
+        grid-area: h2;
+    }
+    #mexican-rice {
+        grid-area: mexican-rice;
+        display: block;
+    }
+    #salsa {
+        grid-area: salsa;
+    }
+    #guacamole {
+        grid-area: guacamole;
+    }
+    #tortillas {
+        grid-area: tortillas;
+    }
+    footer {
+        position: relative;
+    }
+    #social span{
+        width: 40%;
+    }
+    #social svg {
+        width: 50%;
+    }
+    #social a {
+        padding: 10px;
+    }
+    #footer-text {
+        left: 20px;
+        position: absolute;
+        top: 150px;
+    }
+}
+@media (max-width: 414px) {
+    body {
+        max-width: 414px;
+    }
+    #menu {
+        width: 100%;
+        height: 60px;
+    }
+    #burger {
+        visibility: visible;
+        left: 0;
+    }
+    #search {
+        top: 80px;
+    }
+    #share-nav {
+        background-color: #F2F2F2;
+    }
+    #food-menu {
+        visibility: hidden;
+    }
+    #home {
+        left: 100px;
+    }
+    header img {
+        width: 100%;
+    }
+    header h1 {
+        width: 100%;
+        padding-top: 100px;
+        background-color: #F2F2F2;
+    }
+    main {
+        display: grid;
+        grid-template-areas: 
+        "details"
+        "ingredients"
+        "directions";
+    }
+    #details {
+        grid-area: details;
+    }
+    #ingredients {
+        grid-area: ingredients;
+    }
+    #directions {
+        grid-area: directions;
+    }    
+}
